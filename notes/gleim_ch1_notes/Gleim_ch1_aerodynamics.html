@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Gleim_ch1_aerodynamics</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<p>March 15 2017</p>
+
+<p><strong>Notes</strong>: for Gleim Private Pilot FAA Knowledge Test</p>
+
+<h1 id="toc_0">Chapter 1 - Aerodynamics</h1>
+
+<p><a href="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/21_phak_glossary.pdf">Terms</a></p>
+
+<h2 id="toc_1">Flight Controls</h2>
+
+<ul>
+<li><p>PHAK <a href="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/08_phak_ch6.pdf">CH6 Flight Controls</a></p>
+
+<ul>
+<li><a href="http://ia801308.us.archive.org/35/items/pilotshandbook_1512_librivox/pilotshandbook_16_faa_128kb.mp3">Audio Primary Flight Controls</a></li>
+<li><a href="http://ia801308.us.archive.org/35/items/pilotshandbook_1512_librivox/pilotshandbook_17_faa_128kb.mp3">Audio Secondary Flight Controls</a></li>
+</ul></li>
+<li><p>Primary Flight Controls (<a href="https://www.youtube.com/watch?v=w7c2H9yUxpQ">video</a></p>
+
+<ul>
+<li>Ailerons - longitudinal axis control (roll)</li>
+<li>Elevator - lateral axis control (pitch)</li>
+<li>Stabilator - one piece horizontal stabilizer</li>
+<li>Rudder - Vertical access control</li>
+<li>Canard - lateral axis control (pitch)</li>
+</ul></li>
+<li><p>Secondary Flight Controls</p>
+
+<ul>
+<li>Flaps - Increase angle of descent without increase in airspeed</li>
+<li>Spoiler - </li>
+<li>Trim System - </li>
+</ul></li>
+</ul>
+
+<p><img src="assets/gliem_ch1_flight_controls.png" alt="Flight Controls"></p>
+
+<h3 id="toc_2">Aileron</h3>
+
+<p>Primary flight control surfaces mounted on the trailing edge of an airplane wing, near the tip. Ailerons control roll about the longitudinal axis.</p>
+
+<h3 id="toc_3">Elevator</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Elevator_(aeronautics)">Elevator</a> The horizontal, movable primary control surface in the tail section, or empennage, of an airplane. The elevator is hinged to the trailing edge of the fixed horizontal stabilizer.</p>
+
+<h3 id="toc_4">Stabilator</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Stabilator">Stabilator</a> A single-piece horizontal tail surface on an airplane that pivots around a central hinge point. A stabilator serves the purposes of both the horizontal stabilizer and the elevators.</p>
+
+<h3 id="toc_5">Rudder</h3>
+
+<p><strong>Rudder</strong>. The movable primary control surface mounted on the trailing edge of the vertical fin of an airplane. Movement of the rudder rotates the airplane about its vertical axis.</p>
+
+<h3 id="toc_6">Canard</h3>
+
+<p><strong>Canard</strong>. A horizontal surface mounted ahead of the main wing to provide longitudinal stability and control. It may
+be a fixed, movable, or variable geometry surface, with or without control surfaces.</p>
+
+<p><strong>Canard configuration</strong>. A configuration in which the span of the forward wings is substantially less than that of the main wing.</p>
+
+<h3 id="toc_7">Flaps</h3>
+
+<p>Flaps. Hinged portion of the trailing edge between the ailerons and fuselage. In some aircraft ailerons and flaps are interconnected to produce full-span “flaperons.” In either case, flaps change the lift and drag on the wing.</p>
+
+<h3 id="toc_8">Spolier</h3>
+
+<p><strong>Spoilers</strong>. High-drag devices that can be raised into the air flowing over an airfoil, reducing lift and increasing drag. Spoilers are used for roll control on some aircraft. Deploying spoilers on both wings at the same time allows the aircraft to descend without gaining speed. Spoilers are also used to shorten the ground roll after landing.</p>
+
+<h3 id="toc_9">Trim System</h3>
+
+<p><strong>Trim</strong>. To adjust the aerodynamic forces on the control surfaces so that the aircraft maintains the set attitude without any control input.</p>
+
+<p><strong>Trim tab</strong>. A small auxiliary hinged portion of a movable control surface that can be adjusted during flight to a position resulting in a balance of control forces.</p>
+
+<h2 id="toc_10">Aerodynamic Forces</h2>
+
+<ul>
+<li>PHAK <a href="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/07_phak_ch5.pdf">CH5 Aerodynamics
+of Flight</a>
+
+<ul>
+<li><a href="http://ia801308.us.archive.org/35/items/pilotshandbook_1512_librivox/pilotshandbook_08_faa_128kb.mp3">Audio</a></li>
+</ul></li>
+</ul>
+
+<p><img src="assets/gliem_ch1_aerodynamics.png" alt="Aerodynamic Forces"></p>
+
+<ul>
+<li>Forces acting on airplane during flight
+
+<ul>
+<li>Lift - Upward acting force</li>
+<li>Weight - The downward acting force</li>
+<li>Thrust - Forward acting Force</li>
+<li>Drag - The rearward acting force</li>
+</ul></li>
+</ul>
+
+<p>There are the force vectors in relation to an airplane:</p>
+
+<p><img src="assets/gleim_ch1_foce_relationship.png" alt="Figure 5-1. Relationship of forces acting on an aircraft"></p>
+
+<p>This refinement of the old “thrust equals drag; lift equals weight” formula explains that a portion of thrust is directed upward in climbs and slow flight and acts as if it were lift while a portion of weight is directed backward opposite to the direction of flight and acts as if it were drag. In slow flight, thrust has an upward component. But because the aircraft is in level flight, weight does not contribute to drag. </p>
+
+<p><img src="assets/gleim_ch1_force_vectors_stablized_climb.png" alt="Figure 5-2. Force vectors during a stabilized climb."></p>
+
+<p><a href="https://www.grc.nasa.gov/www/k-12/airplane/bern.html">Bernoulli&#39;s Principle</a>: <code>Static Pressure + Dynamic Pressure = Total Pressure</code></p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ZauGjgZ0rBQ">Vortex Shedding - Smarter Every Day 23</a></li>
+<li><a href="https://www.youtube.com/watch?v=aFO4PBolwFg">How Does A Wing Actually Work?</a> - The real story</li>
+<li><a href="https://www.youtube.com/watch?v=QKCK4lJLQHU">Common Misconceptions in Aerodynamics</a></li>
+</ul>
+
+<h2 id="toc_11">Angle Of Attack (AOA)</h2>
+
+<ul>
+<li>PHAK <a href="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/08_phak_ch6.pdf">CH6-4 Angle of Attack</a></li>
+</ul>
+
+<p><strong>Angle of attack</strong>. The angle of attack is the angle at which relative wind meets an airfoil. It is the angle that is formed by the chord of the airfoil and the direction of the relative wind or between the chord line and the flight path. The angle of attack changes during a flight as the pilot changes the direction of the aircraft and is related to the amount of lift being produced. </p>
+
+<p><img src="assets/gleim_ch1_aoa.png" alt="Angle of Attack"></p>
+
+<h2 id="toc_12">Stalls and Spins</h2>
+
+<p><strong>Stall</strong>. A rapid decrease in lift caused by the separation of airflow from the wing’s surface, brought on by exceeding the critical angle of attack. A stall can occur at any pitch attitude or airspeed.</p>
+
+<p><strong>Spin</strong>. An aggravated stall that results in an airplane descending in a helical, or corkscrew path.</p>
+
+<p><strong><em>An airplane in a given configuration will tall at the same indicated airspeed regardless of altitude because the airspeed indicator is directly related to air density.</em></strong></p>
+
+<p><img src="assets/gleim_ch1_stall.png" alt="Stall"></p>
+
+<h2 id="toc_13">Frost</h2>
+
+<p>PHAK is wrong in it&#39;s definition of frost. It states:</p>
+
+<p><strong>Frost</strong>. Ice crystal deposits formed by <a href="https://en.wikipedia.org/wiki/Sublimation_(phase_transition)">sublimation</a> when temperature and <a href="https://en.wikipedia.org/wiki/Dew_point">dewpoint</a> are below freezing.</p>
+
+<p>But frost is a process of <strong>deposition</strong> and not <em>sublimation</em>.</p>
+
+<p>If ice, snow, and frost are allowed to accumulate on the surface of an aircraft, the smooth airflow over the wing is disrupted. This causes the boundary layer to separate at an AOA lower than that of the critical angle. Lift is greatly reduced, altering expected aircraft performance. If ice is allowed to accumulate on the aircraft during flight, the weight of the aircraft is increased while the ability to generate lift is decreased. [Figure 5-40] As little as 0.8 millimeter of ice on the upper wing surface increases drag and reduces aircraft lift by 25 percent. </p>
+
+<ul>
+<li>PHAK <a href="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/14_phak_ch12.pdf">CH12-15 Weather Theory</a>
+
+<ul>
+<li><a href="http://ia801308.us.archive.org/35/items/pilotshandbook_1512_librivox/pilotshandbook_40_faa_128kb.mp3">audio</a></li>
+</ul></li>
+</ul>
+
+<p><strong>Dew and Frost</strong> On cool, clear, calm nights, the temperature of the ground and objects on the surface can cause temperatures of the surrounding air to drop below the dew point. When this occurs, the moisture in the air condenses and deposits itself on the ground, buildings, and other objects like cars and aircraft. This moisture is known as dew and sometimes can be seen on grass and other objects in the morning. If the temperature is below freezing, the moisture is deposited in the form of frost. While dew poses no threat to an aircraft, frost poses a definite flight safety hazard. Frost disrupts the flow of air over the wing and can drastically reduce the  production of lift. It also increases drag, which when combined with lowered lift production, can adversely affect the ability to take off. An aircraft must be thoroughly cleaned and free of frost prior to beginning a flight. </p>
+
+<p><a href="https://stevengoddard.wordpress.com/2010/09/04/the-freezing-point-and-the-dew-point/">Science of frost</a></p>
+
+<h2 id="toc_14">Ground Effect</h2>
+
+<p><a href="https://www.youtube.com/watch?v=OfibQQFskcE&amp;feature=youtu.be">Ground Effect Simulation</a></p>
+
+<h2 id="toc_15">Airplane Turn</h2>
+
+<h2 id="toc_16">Airplane Stability</h2>
+
+<h2 id="toc_17">Torque and P-Factor</h2>
+
+<h2 id="toc_18">Load Factor</h2>
+
+<h2 id="toc_19">Velocity Vs G-Loads</h2>
+
+
+
+
+</body>
+
+</html>
