@@ -4,6 +4,8 @@ March 15 2017
 
 # Chapter 1 - Aerodynamics
 
+[Mind Map](assets/gleim_ch1_aerodynamics.pdf)
+
 [Terms](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/21_phak_glossary.pdf)
 
 ## Flight Controls
@@ -25,6 +27,8 @@ March 15 2017
 	* Trim System - 
 
 ![Flight Controls](assets/gliem_ch1_flight_controls.png)
+
+![axis_of_airplane](assets/axis_of_airplane.png)
 
 ### Aileron
 
@@ -101,6 +105,14 @@ This refinement of the old “thrust equals drag; lift equals weight” formula 
 * [Vortex Shedding - Smarter Every Day 23](https://www.youtube.com/watch?v=ZauGjgZ0rBQ)
 * [How Does A Wing Actually Work?](https://www.youtube.com/watch?v=aFO4PBolwFg) - The real story
 * [Common Misconceptions in Aerodynamics](https://www.youtube.com/watch?v=QKCK4lJLQHU)
+* [Cambridge scientist debunks flying myth](http://www.telegraph.co.uk/news/science/science-news/9035708/Cambridge-scientist-debunks-flying-myth.html)
+
+
+## Lift
+
+Theories in the Production of Lift In order to achieve flight in a machine that is heavier than air, there are several obstacles we must overcome. One of those obstacles, discussed previously, is the resistance to movement called drag. The most challenging obstacle to overcome in aviation, however, is the force of gravity. A wing moving through air generates the force called lift, also previously discussed. Lift from the wing that is greater than the force of gravity, directed opposite to the direction of gravity, enables an aircraft to fly. Generating this force called lift is based on some important principles, Newton's basic laws of motion, and Bernoulli's principle of differential pressure. Newton’s Basic Laws of Motion
+The formulation of lift has historically been an adaptation over the past few centuries of basic physical laws. These laws, although seemingly applicable to all aspects of lift, do not explain how lift is formulated. In fact, one must consider the many airfoils that are symmetrical, yet produce
+significant lift. 
 
 
 ## Angle Of Attack (AOA)
@@ -112,6 +124,9 @@ This refinement of the old “thrust equals drag; lift equals weight” formula 
 
 
 ![Angle of Attack](assets/gleim_ch1_aoa.png)
+
+![Angle of attack](assets/aoa.png)
+CP= Center of Pressure 
 
 
 ## Stalls and Spins
@@ -149,15 +164,89 @@ If ice, snow, and frost are allowed to accumulate on the surface of an aircraft,
 
 ## Ground Effect
 
-[Ground Effect Simulation](https://www.youtube.com/watch?v=OfibQQFskcE&feature=youtu.be)
+* [My Quora question](https://www.quora.com/What-is-the-physics-math-of-ground-effect-doesnt-come-into-play-until-youre-within-1-wingspan-of-the-ground-Why-is-1-wing-span-a-magic-value)
+* [Effect of low Reynolds number](https://www.quora.com/What-is-the-meaning-of-Life-at-Low-Reynolds-Number)
+* [Ground Effect Simulation](https://www.youtube.com/watch?v=OfibQQFskcE&feature=youtu.be)
+
+**Ground effect**. The condition of slightly increased air pressure below an airplane wing or helicopter rotor system that increases the amount of lift produced. It exists within approximately one wing span or one rotor diameter from the ground. It results from a reduction in upwash, downwash, and wingtip vortices, and provides a corresponding decrease in induced drag.
+
+![Aerodynamics](assets/gleim_ch1_aerodynamics.png)
+
 
 
 ## Airplane Turn
 
+[NASA](https://www.grc.nasa.gov/www/k-12/airplane/turns.html)
+
+Interestingly the instructor used `centrifugal force` to describe how an aircraft turns. He must be using that to describe effects of inertia since `centrifugal force` is not an [actual force](https://www.youtube.com/watch?v=yAfg_8OLjvs) [2](http://phun.physics.virginia.edu/topics/centrifugal.html). The same discussion is had in PHAK see [Figure 5-34](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/07_phak_ch5.pdf).
+
+The horizontal component of lift makes and airplane turn. To attain horizontal component of lift the pilot coordinates rudder, ailerons, and elevator.
+
+The rudder on an airplane controls the yaw, i.e. rotation about the vertical axis, but does not cause the airplane to turn.
+
+__This is an odd statement since `yaw` is obviously a turn about the CG in the vertical axis.__ This is really just loose terminology for the word turn.
+
+
+All turns are coordinated by use of ailerons, rudder, and elevator. Applying aileron pressure is necessary to place the aircraft in the desired angle of bank, while simultaneous application of rudder pressure is necessary to counteract the resultant adverse yaw. Additionally, because more lift is required during a turn than during straight-and-level flight, the angle of attack (AOA) must be increased by applying elevator back pressure. The steeper the turn, the more elevator back pressure that is needed.
+
+
+Better description of turn is [here](https://www.grc.nasa.gov/www/k-12/airplane/turns.html):
+
+![turns](assets/turns.gif)
+
+Side force component of lift causes circular flight path. A fundamental aircraft motion is a banking turn. This maneuver is used to change the aircraft heading. The turn is initiated by using the ailerons or spoilers to roll, or bank, the aircraft to one side. On the figure, the airliner is banked to the right by lowering the left aileron and raising the right aileron. The lift of the wings of the aircraft is a vector quantity which is always directed perpendicular to the flight path and perpendicular to the wings generating the lift. As the aircraft is rolled, the lift vector is tilted in the direction of the roll. We can break the lift vector into two components. One component is vertical and opposed to the weight which is always directed towards the center of the earth. The other component is an unopposed side force which is in the direction of the roll, and perpendicular to the flight path.
+
+As long as the aircraft is banked, the side force is a constant, unopposed force on the aircraft. The resulting motion of the center of gravity of the aircraft is a circular arc. When the wings are brought level by an opposing motion of the ailerons, the side force is eliminated and the aircraft continues to fly in a straight line along a new heading. Notice that the rudder is not used to turn the aircraft. The aircraft is turned through the action of the side component of the lift force. The rudder is used during the turn to coordinate the turn, i.e. to keep the nose of the aircraft pointed along the flight path. If the rudder is not used, one can encounter an adverse yaw in which the drag on the outer wing pulls the aircraft nose away from the flight path.
+
+
 ## Airplane Stability
+
+PHAK [Ch5-14 Stability](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/07_phak_ch5.pdf)
+
+
+Stability is the inherent quality of an aircraft to correct for conditions that may disturb its equilibrium and to return to or to continue on the original flight path. It is primarily an aircraft design characteristic. The flight paths and attitudes an aircraft flies are limited by the aerodynamic characteristics of the aircraft, its propulsion system, and its structural strength. These limitations indicate the maximum performance and maneuverability of the aircraft. If the aircraft is to provide maximum utility, it must be safely controllable to the full extent of these limits without exceeding the pilot’s strength or requiring exceptional flying ability. If an aircraft is to fly straight and steady along any arbitrary flight path, the forces acting on it must be in static equilibrium. The reaction of any body when its equilibrium is disturbed is referred to as stability. The two types of stability are static and dynamic.
+
+
+![Stability](assets/gleim_ch1_stability.png)
+
 
 ## Torque and P-Factor
 
+The airplane engine spins the propeller in the clockwise direction (in the USA). There is an opposite force placed on the aircraft which causes the plane to want to rotate to counter-clockwise along the longitudinal axis.
+
+Torque and P-Factor PHAK [Ch5-30](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/media/pilot_handbook.pdf) To the pilot, “torque” (the left turning tendency of the airplane) is made up of four elements that cause or produce a twisting or rotating motion around at least one of the airplane’s three axes. These four elements are:
+
+1. Torque reaction from engine and propeller
+2. Corkscrewing effect of the slipstream
+3. Gyroscopic action of the propeller
+4. Asymmetric loading of the propeller (P-factor)
+
+[Demonstration](https://www.youtube.com/watch?v=QGWbjGqmoWo)
+
+The pitch of the plane effects the bite of the prop into the air which causes decreased bite on the descending (right) blade and increased bite on the ascending blade.
+
+![PFactor](assets/Gleim_ch1_PFactor.png)
+
+
+
 ## Load Factor
 
+Additional weight carried by the wings due to the airplanes weight plus the "centrifugal" force.
+
+[Forces Acting On An Airplane In A Turn](https://www.youtube.com/watch?v=Oc7ViQnXkUs)
+
+* Fl = Lift Force
+* Fg = Gravity Force
+
+
+![Load Factor](assets/loadfactor.png)
+
+
+[`1/(cos 60 degrees = 2`](https://www.google.com/search?q=1%2F(cos+60)&rlz=1C5CHFA_enUS730US730&oq=1%2F(cos+60)&aqs=chrome..69i57j6j69i60.543j0j7&sourceid=chrome&ie=UTF-8#q=1/(cos+60+degrees)&*)
+
+[`1/(cos 30 degrees = 1.015`](https://www.google.com/search?q=1%2F(cos+60)&rlz=1C5CHFA_enUS730US730&oq=1%2F(cos+60)&aqs=chrome..69i57j6j69i60.543j0j7&sourceid=chrome&ie=UTF-8#q=1/(cos+30+degrees)&*)
+
+
 ## Velocity Vs G-Loads
+
+

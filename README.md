@@ -1,4 +1,4 @@
-# flight_instruction
+# Flight Instruction 
 
 Notes from private pilot training.
 
@@ -7,6 +7,5 @@ Notes from private pilot training.
 
 
 * Book Gleim Private Pilot FAA Knowledge Test
-
-* Chapter 1 [Note](notes/gleim_ch1_notes)
-
+	* Airplanes and Aerodynamics - Chapter 1 [Notes](notes/gleim_ch1_notes)
+	* Airplane Instruments, Engines, And Systems - Chapter 2 [Notes](notes/gleim_ch2_notes)
