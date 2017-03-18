@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1489580130685" ID="ID_1142687482" MODIFIED="1489602708784" TEXT="Aerodynamics">
+<node CREATED="1489580130685" ID="ID_1142687482" MODIFIED="1489612707295" TEXT="Aerodynamics">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1489580130685" ID="ID_1166085424" MODIFIED="1489604690682" POSITION="left" TEXT="Flight Controls">
 <font ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -63,7 +63,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1489588255273" ID="ID_1053396731" MODIFIED="1489609908511" POSITION="left" TEXT="Ground Effect">
+<node CREATED="1489588255273" ID="ID_1053396731" MODIFIED="1489612709386" POSITION="left" TEXT="Ground Effect">
 <node CREATED="1489599115695" ID="ID_1752724385" MODIFIED="1489599134988" TEXT="Begins one wingspan above ground"/>
 <node CREATED="1489599136876" ID="ID_1544675259" MODIFIED="1489599159755" TEXT="Effect greatly increases 1/2 winspan height"/>
 <node CREATED="1489599235377" ID="ID_384156945" MODIFIED="1489599239099" TEXT="Cause">
