@@ -101,8 +101,11 @@ This refinement of the old “thrust equals drag; lift equals weight” formula 
 	
 [Bernoulli's Principle](https://www.grc.nasa.gov/www/k-12/airplane/bern.html): ```Static Pressure + Dynamic Pressure = Total Pressure```
 
+The very complex "real story" of lift [Navier-Stokes Equations](https://www.grc.nasa.gov/www/k-12/airplane/nseqs.html)
+
 
 * [Vortex Shedding - Smarter Every Day 23](https://www.youtube.com/watch?v=ZauGjgZ0rBQ)
+* [NASA - Incorrect lift theory](https://www.grc.nasa.gov/www/k-12/airplane/wrong1.html) see [Video Demo](http://www.telegraph.co.uk/news/science/science-news/9035708/Cambridge-scientist-debunks-flying-myth.html)
 * [How Does A Wing Actually Work?](https://www.youtube.com/watch?v=aFO4PBolwFg) - The real story
 * [Common Misconceptions in Aerodynamics](https://www.youtube.com/watch?v=QKCK4lJLQHU)
 * [Cambridge scientist debunks flying myth](http://www.telegraph.co.uk/news/science/science-news/9035708/Cambridge-scientist-debunks-flying-myth.html)
