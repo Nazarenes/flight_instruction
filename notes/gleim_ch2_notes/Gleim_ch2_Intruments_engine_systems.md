@@ -72,7 +72,7 @@ Changes in pressure and/or temperature effect the indicated altitude:
 
 [Density Altitude](https://en.wikipedia.org/wiki/Density_altitude) formula
 
-![Density Altitude](assets/densityAltFormula.svg)
+![Density Altitude](assets/densityAltFormula.png)
 
 * where
 	* DA = density altitude in meters
@@ -88,6 +88,7 @@ Changes in pressure and/or temperature effect the indicated altitude:
 ### Magnetic Compass 
 
 * Required for both VFR and IFR § 25.1303 (a3) Flight and navigation instruments.
+
 
 **Turning Error**
 
@@ -171,7 +172,7 @@ There is no compass error when initiating a turn from an east or west heading.
 
 WE ANDS - when flying West or East, if you Accelerate the compass will show a turn to the North. If you decelerate, the compass will show a turn to the South.
 
-![](assets/gleim_ch2_compass_acceleration error.png)
+![](assets/gleim_ch2_compass_acceleration_error.png)
 
 
 
